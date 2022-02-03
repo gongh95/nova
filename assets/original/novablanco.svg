@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <title>Nova</title>
-</head>
-
-<body>
-    <header id="header">
-        <div class="logo-container">
-            <div class="logo">
-                <!-- <img src="./assets/original/novablanco.svg" alt=""> -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="131.234mm" height="157.819mm" viewBox="0 0 1550 1864">
-                    <path id="Selección #1" fill="#000" stroke="#000" stroke-width="3" d="M 2.00,0.00
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="131.234mm" height="157.819mm"
+     viewBox="0 0 1550 1864">
+  <path id="Selección #1"
+        fill="#fff" stroke="black" stroke-width="2"
+        d="M 2.00,0.00
            C 2.00,0.00 2.00,262.00 2.00,262.00
              2.00,262.00 120.00,262.00 120.00,262.00
              120.00,262.00 120.00,1153.00 120.00,1153.00
@@ -241,49 +230,4 @@
              1254.60,1748.99 1259.75,1742.94 1266.00,1738.43
              1277.02,1730.48 1290.22,1726.49 1303.00,1722.33
              1323.11,1715.79 1344.27,1710.17 1365.00,1706.00 Z" />
-                </svg>
-            </div>
-        </div>
-        <nav class="nav-container">
-            <div class="nav-boton" id="nav-boton"></div>
-            <div class="nav-responsive" id="nav-ul">
-            <ul class="nav-ul left">
-                <li class="nav-item"><a href="#">Inicio</a></li>
-                <li class="nav-item"><a href="#productos">Productos</a></li>
-            </ul>
-            <ul class="nav-ul right">
-                <li class="nav-item"><a href="#about">Sobre nosotros</a></li>
-                <li class="nav-item"><a href="#contacto">Contacto</a></li>
-            </ul></div>
-        </nav>
-        <script>
-            const menu = document.getElementById("nav-boton");
-            menu.addEventListener("click", () => {
-                document.getElementById("nav-ul").classList.toggle("activa");
-            })
-        </script>
-    </header>
-    <aside class="redes-lateral"></aside>
-    <main id="main">
-        <div class="section-container">
-            <section id="productos" class="section-productos">
-                <h3>Productos</h3>
-                <div class="producto-container">
-                    <div class="producto"></div>
-                </div>
-            </section>
-            <section id="about" class="section-about">
-                <h3>Sobre nosotros</h3>
-            </section>
-        </div>
-    </main>
-
-    <div class="contacto" id="contacto">
-        <h3>Contacto</h3>
-        <form action="" class="form-contacto"></form>
-    </div>
-
-    <footer id="footer"></footer>
-</body>
-
-</html>
+</svg>

@@ -11,25 +11,50 @@ html {
 }
 body {
     font-size: 16px;
+    background-image: url("./assets/img/bg-patron.jpg");
+    /* background-attachment: fixed; */
+    background-position: center;
+    /* backdrop-filter: blur(3px) saturate(.5) hue-rotate(50deg); */
+    /* clip-path: polygon(0 100%, 0 0, 10% 0, 40% 88%, 38% 0%, 46% 0, 46% 100%, 36% 100%, 8% 13%, 8% 100%); */
+    /* background-size: 200%; */
 }
 
 /* HEADER */
 
 #header {
-    background: #aa4b6b;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /* background-color: cornflowerblue; */
+    background: #aa4b6b;  /*fallback for old browsers*/
+    background: -webkit-linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);  /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); /*W3C, IE 10+ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
+    /*background-image: url("./assets/img/bg-1200px.png");
+    background-attachment: fixed;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 100%, 0 0, 10% 0, 40% 88%, 38% 0%, 46% 0, 46% 100%, 36% 100%, 8% 13%, 8% 100%);
+    background-size: 100%; */
     width: 100%;
     height: 3em;
 }
 #header .logo-container {
-    width: 60px;
-    height: 60px;
+    top: .4em;
+    width: 100px;
+    height: 34px;
+    /* min-width: 1200px; */
+    /* overflow: hidden; */
+    margin: 0 auto;
+    /* margin-bottom: 1em; */
+    /* padding: 0.5em 0px 0.5em 0px; */
+    position: relative;
 }
 #header .logo-container .logo {
+    width: 100px;
+    height: 100px;
     color: #fff;
     font-size: 3em;
+    margin: 0 auto;
+}
+#header .logo-container .logo > svg {
+    width: 100px;
+    height: 100px;
 }
 
 /* NAV */
@@ -38,19 +63,31 @@ body {
     width: 100%;
     height: auto;
 }
-#header .nav-container .nav-ul {
+#header .nav-container .nav-responsive .nav-ul {
     margin: 0 auto;
     min-width: none;
-    max-width: 1000px;
+    /* max-width: 500px; */
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
-    align-items: flex-end;
 }
-#header .nav-container .nav-ul .nav-item > a {
+#header .nav-container .nav-responsive .nav-ul .nav-item > a {
     text-decoration: none;
-    color: #120361;
+    color: #fff;
+    font-size: 1.32em;
 }
+#header .nav-container .nav-boton {
+    width: 50px;
+    height: 50px;
+    background-color: #120361;
+}
+#header .nav-container .nav-responsive .nav-ul {
+    display: none;
+}
+#header .nav-container .nav-responsive .nav-ul .activa {
+    display: flex;
+}
+
 li {
     list-style-type: none;
 }
@@ -60,7 +97,7 @@ li {
 #main {
     width: 100%;
     height: calc(100vh - 3em);
-    background-color: var(--bg-clr);
+    /* background-color: var(--bg-clr); */
     padding: .25em;
     padding-top: 3em;
 }
@@ -73,15 +110,49 @@ li {
     border-radius: 3px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
     #header {
-        height: 8em;
+        height: 6em;
     }
-    #header .nav-container .nav-ul .nav-item > a {
+    #header .nav-container .nav-boton {
+        display: none;
+    }
+    #header .nav-container .nav-responsive {
+        display: flex;
+        min-width: 60%;
+    }
+    #header .nav-container .nav-responsive .nav-ul {
+        display: flex;
+        flex-direction: row;
+    }
+    #header .nav-container .nav-responsive .nav-ul .right {
+        align-items: flex-end;
+    }
+    #header .nav-container .nav-responsive .nav-ul .left {
+        align-items: flex-start;
+    }
+    
+    #header .nav-container .nav-responsive .nav-ul .nav-item {
+        padding: 0px 30px;
+    }
+    #header .nav-container .nav-responsive .nav-ul .nav-item > a {
+        text-decoration: none;
         color: #fff;
+        text-align: center;
+    }
+    #header .logo-container {
+        top: 2em;
     }
     #main {
         height: calc(100vh - 8em);
         padding-top: 0.25em;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    #header .nav-container .nav-responsive .nav-ul {
+        flex-direction: column;
+    }
+    #header .nav-container {
+        min-width: 700px;
     }
 }
