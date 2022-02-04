@@ -245,19 +245,18 @@
             </div>
         </div>
         <nav class="nav-container">
-            <div class="nav-boton" id="nav-boton"></div>
-            <div class="nav-responsive" id="nav-ul">
-            <ul class="nav-ul left">
+            <div class="nav-btn-resp" id="nav-btn-resp">Menú</div>
+            <ul class="nav-ul" id="nav-ul">
                 <li class="nav-item"><a href="#">Inicio</a></li>
                 <li class="nav-item"><a href="#productos">Productos</a></li>
+                <li class="nav-item right"><a href="#about">Sobre nosotros</a></li>
+                <li class="nav-item right"><a href="#contacto">Contacto</a></li>
             </ul>
-            <ul class="nav-ul right">
-                <li class="nav-item"><a href="#about">Sobre nosotros</a></li>
-                <li class="nav-item"><a href="#contacto">Contacto</a></li>
-            </ul></div>
+
+            </div>
         </nav>
         <script>
-            const menu = document.getElementById("nav-boton");
+            const menu = document.getElementById("nav-btn-resp");
             menu.addEventListener("click", () => {
                 document.getElementById("nav-ul").classList.toggle("activa");
             })
