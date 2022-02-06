@@ -187,6 +187,7 @@ body {
         position: absolute;
         top: 2em;
         background-color: transparent;
+        backdrop-filter: none;
     }
 
     #header .nav-container .nav-ul {
