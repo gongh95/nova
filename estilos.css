@@ -99,11 +99,37 @@ body {
 
 /* NAV-BTN-RESP */
 #header .nav-container .nav-btn-resp {
+    padding: 6px;
     position: absolute;
     width: 30px;
     height: 30px;
     right: 20px;
-    top: -30px;
+    top: -40px;
+}
+
+#header .nav-container .nav-btn-resp .nav-btn-resp__disenio {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+}
+
+#header .nav-container .nav-btn-resp .nav-btn-resp__disenio::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    top: 9px;
+}
+
+#header .nav-container .nav-btn-resp .nav-btn-resp__disenio::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    top: 18px;
 }
 
 #header .nav-container .nav-ul {
