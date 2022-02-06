@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
     <title>Nova</title>
 </head>
 
@@ -245,10 +245,10 @@
             </div>
         </div>
         <div class="header-bg"></div>
-        <nav class="nav-container">
+        <nav class="nav-container" id="nav-container">
             <div class="nav-btn-resp" id="nav-btn-resp">Menú</div>
             <ul class="nav-ul" id="nav-ul">
-                <li class="nav-item"><a href="#">Inicio</a></li>
+                <li class="nav-item"><a id="item1" href="#">Inicio</a></li>
                 <li class="nav-item"><a href="#productos">Productos</a></li>
                 <li class="nav-item right"><a href="#about">Sobre nosotros</a></li>
                 <li class="nav-item right"><a href="#contacto">Contacto</a></li>
@@ -257,10 +257,40 @@
             </div>
         </nav>
         <script>
-            const menu = document.getElementById("nav-btn-resp");
-            menu.addEventListener("click", () => {
-                document.getElementById("nav-ul").classList.toggle("activa");
-            })
+            const menuBtn = document.getElementById("nav-btn-resp");
+            const menuNav = document.getElementById("nav-ul");
+            const menuContainer = document.getElementById("nav-container");
+            const aNav = document.getElementById("nav-ul").getElementsByTagName("a");
+
+            
+            menuBtn.addEventListener("click", () => {
+                menuNav.classList.toggle("activa");
+                menuContainer.classList.toggle("mostrar");
+            });
+            menuNav.addEventListener("click", () => {
+                menuNav.classList.remove("activa");
+                menuContainer.classList.toggle("mostrar");
+            });
+
+           
+            //AGREGAMOS UN EVENTO DE TIPO CLICK A TODO EL DOCUMENTO
+            //document.addEventListener("click", (e) => {
+
+                //DECIMOS QUE SI DONDE SE DIO CLICK NO TIENE LA CASE MENU OCULTAMOS EL MENU
+              //  if (e.target.classList.contains("nav-ul")) {
+              //      document.getElementById("nav-ul").classList.remove("activa");
+
+                    //REMOVEMOS LA CLASE OVERLAY PARA QUE SE OCULTE
+                    // document.getElementsById("nav-item").classList.remove("activa");
+
+              //  }
+            //});
+
+            // document.addEventListener("click", (e) => {
+            //     if (e.target.classList.contains("a")) {
+            //             document.getElementById("nav-ul").classList.remove("activa");
+            //         }
+            // });
         </script>
     </header>
     <aside class="redes-lateral"></aside>
