@@ -112,6 +112,7 @@ body {
     width: 20px;
     height: 3px;
     background-color: #fff;
+    border-radius: 5px;
 }
 
 #header .nav-container .nav-btn-resp .nav-btn-resp__disenio::before {
@@ -120,6 +121,7 @@ body {
     width: 20px;
     height: 3px;
     background-color: #fff;
+    border-radius: 5px;
     top: 9px;
 }
 
@@ -129,6 +131,7 @@ body {
     width: 20px;
     height: 3px;
     background-color: #fff;
+    border-radius: 5px;
     top: 18px;
 }
 
@@ -172,10 +175,10 @@ body {
 
 #main {
     width: 100%;
-    height: calc(100vh - 3em);
+    /* height: calc(100vh - 3em); */
     /* background-color: var(--bg-clr); */
     padding: .25em;
-    padding-top: 3.1em;
+    padding-top: 5em;
 }
 
 #main .section-container {
@@ -183,9 +186,34 @@ body {
     min-width: 300px;
     max-width: 1200px;
     height: auto;
-    border: 1px solid #120361;
+    /* border: 1px solid #120361; */
+    box-shadow: inset 0px 0px 15px 4px #d9a8d9, 0px 0px 2px 2px #d9a8d9;
     border-radius: 3px;
+    background-color: #f1ebf0;
 }
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3em;
+    color: #242527;
+    margin: 5px auto;
+    text-align: center;
+}
+
+
+/* CONTACTO */
+
+#contacto {
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 1200px;
+    height: auto;
+    /* border: 3px dotted #120361; */
+    box-shadow: inset 0px 0px 15px 4px #d9a8d9, 0px 0px 2px 2px #d9a8d9;
+    border-radius: 3px;
+    background-color: #f1ebf0;
+}
+
+/* FOOTER */
 
 @media screen and (min-width: 1000px) {
     #header {
@@ -229,11 +257,31 @@ body {
     }
 
     #header .nav-container .nav-ul .nav-item {
+        font-size: 1.3em;
         margin-right: -4em;
+    }
+    /*#header .nav-container .nav-ul .nav-item a::before {
+        content: "";
+        position: absolute;
+        margin: 0 auto;
+        width: 2px;
+        height: 3px;
+        bottom: 0;
+        background-color: currentColor;
+        transition: width .08s linear;
+    }
+    #header .nav-container .nav-ul .nav-item a:hover::before {
+        width: 20px;
+    }*/
+
+    h3 {
+        font-size: 2em;
+        margin: 5px 0px 12px 50px;
+        text-align: left;
     }
 
     #main {
-        height: calc(100vh - 8em);
+        /* height: calc(100vh - 8em); */
         padding-top: 6.1em;
     }
 }
