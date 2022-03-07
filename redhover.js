@@ -8,6 +8,5 @@ let g = document.querySelector('g');
 
 
 
-
-fondo.addEventListener('mouseover', );
+fondo.addEventListener('mouseover', cambiarColor);
 

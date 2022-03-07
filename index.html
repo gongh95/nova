@@ -301,16 +301,39 @@
             // });
         </script>
     </header>
-    <aside class="redes-lateral" id="redes-lateral">
+    <aside class="redes-lateral" id="redes-lateral" onmouseleave="resetColor()">
         <div class="redes-container">
-            <div class="red whats"><a href="tel:+5492252448052"><img src="./assets/ico/whatsapp_109861.svg"
-                        alt="Conectar con Whatsapp"></a></div>
-            <div class="red face"><a href="https://www.facebook.com/nova.tienda.ok" target="_blank"><img src="./assets/ico/facebook_109862.svg"
+            <div class="red"><a href="tel:+5492252448052"><img class="whats" onmouseover="cambiarColor('#2a973c8c')"
+                        src="./assets/ico/whatsapp_109861.svg" alt="Conectar con Whatsapp"></a></div>
+            <div class="red"><a href="https://www.facebook.com/nova.tienda.ok" target="_blank"><img
+                        onmouseover="cambiarColor('#2b2a978c')" class="face" src="./assets/ico/facebook_109862.svg"
                         alt="Conectar con Facebook"></a></div>
-            <div class="red ig"><a href="https://instagram.com" target="_blank"><img src="./assets/ico/instagam_109863.svg"
-                        alt="Conectar con Instagram"></a></div>
-            <div class="red g"><a href="https://google.com.ar" target="_blank"><img src="./assets/ico/g_109859.svg"
-                        alt="Conectar con Google"></a></div>
+            <div class="red"><a href="https://instagram.com" target="_blank"><img onmouseover="cambiarColor('#a52d7b8c')"
+                        class="ig" src="./assets/ico/instagam_109863.svg" alt="Conectar con Instagram"></a></div>
+            <div class="red"><a href="https://google.com.ar" target="_blank"><img onmouseover="cambiarColor('#d341418c')"
+                        class="g" src="./assets/ico/g_109859.svg" alt="Conectar con Google"></a></div>
+            <script>
+                let fondo = document.getElementById('redes-lateral');
+                let red = document.querySelectorAll('red');
+                let whats = document.querySelector('whats');
+                let face = document.querySelector('face');
+                let ig = document.querySelector('ig');
+                let g = document.querySelector('g');
+
+
+
+                function cambiarColor(color) {
+                    fondo.style.backgroundColor = color;
+                }
+
+
+                function resetColor() {
+                    // fondo.style.backgroundColor = "#7172747a";
+                    fondo.removeAttribute("style");
+                }
+
+                fondo.addEventListener('mouseover', cambiarColor);
+            </script>
         </div>
     </aside>
     <main id="main">
@@ -358,11 +381,20 @@
             </section>
             <section id="about" class="section-about">
                 <h3>Sobre nosotros</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima temporibus reprehenderit assumenda commodi ipsum, voluptatibus enim iusto repellat culpa fuga aspernatur ratione illo molestiae consequatur magnam perspiciatis quae. Illum!
-                Cum placeat quaerat fugit. Expedita, impedit dolore maxime minus voluptatibus odio beatae quam dicta! Recusandae assumenda et unde molestiae harum tempora optio blanditiis, molestias numquam nisi! Suscipit porro dolore quam.
-                Delectus quo enim ea non voluptates, eos at quasi blanditiis illum veniam? At libero quis nemo, quaerat exercitationem assumenda nihil dolore rem, beatae facilis ut iure, unde ea et magnam?
-                Odit, et itaque. Deserunt, vitae natus voluptates qui, perspiciatis vero dolores aspernatur quas exercitationem eligendi laudantium debitis. Iusto fugiat unde, nulla rem omnis ullam iure praesentium aliquam, alias impedit fugit.
-                Vero sequi neque deserunt voluptatem explicabo. Quos, qui tenetur! Eos cupiditate impedit dicta? Voluptatem mollitia sed recusandae sequi consequatur tempora neque cumque! Vitae cumque deserunt temporibus porro fuga suscipit quis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis minima temporibus reprehenderit
+                    assumenda commodi ipsum, voluptatibus enim iusto repellat culpa fuga aspernatur ratione illo
+                    molestiae consequatur magnam perspiciatis quae. Illum!
+                    Cum placeat quaerat fugit. Expedita, impedit dolore maxime minus voluptatibus odio beatae quam
+                    dicta! Recusandae assumenda et unde molestiae harum tempora optio blanditiis, molestias numquam
+                    nisi! Suscipit porro dolore quam.
+                    Delectus quo enim ea non voluptates, eos at quasi blanditiis illum veniam? At libero quis nemo,
+                    quaerat exercitationem assumenda nihil dolore rem, beatae facilis ut iure, unde ea et magnam?
+                    Odit, et itaque. Deserunt, vitae natus voluptates qui, perspiciatis vero dolores aspernatur quas
+                    exercitationem eligendi laudantium debitis. Iusto fugiat unde, nulla rem omnis ullam iure
+                    praesentium aliquam, alias impedit fugit.
+                    Vero sequi neque deserunt voluptatem explicabo. Quos, qui tenetur! Eos cupiditate impedit dicta?
+                    Voluptatem mollitia sed recusandae sequi consequatur tempora neque cumque! Vitae cumque deserunt
+                    temporibus porro fuga suscipit quis?</p>
             </section>
         </div>
     </main>
@@ -377,7 +409,7 @@
     <footer id="footer"></footer>
     <script src="./animar.js"></script>
     <script src="./logoanim.js"></script>
-    <script src="./redhover.js"></script>
+    <!-- <script src="./redhover.js"></script> -->
 </body>
 
 </html>

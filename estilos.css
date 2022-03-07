@@ -285,6 +285,7 @@ h3 {
     /* margin: auto; */
     backdrop-filter: blur(2px);
     z-index: 500;
+    transition: all .5s;
 }
 #redes-lateral .redes-container {
     width: 100%;
