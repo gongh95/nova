@@ -1,15 +1,3 @@
-// const logo = document.querySelectorAll(".logo-svg");
-
-// function logoAnim() {
-//     let scrollTop = document.documentElement.scrollTop;
-//     for (var i=0; i < logo.length; i++) {
-//         let logoAnimado = logo[i].offsetTop;
-//         if (logoAnimado < scrollTop) {
-//             logo[i].classList.add(".logo-anim");
-//         }
-//     }
-// }
-
 function logoAnim() {
     const logo = document.querySelector(".logo-svg");
     let scrollTop = document.documentElement.scrollTop;
@@ -22,8 +10,6 @@ function logoAnim() {
         logo.classList.add("logo-init");
     }
 }
-
-
 
 document.onload = logoAnim();
 window.addEventListener("scroll", logoAnim);
