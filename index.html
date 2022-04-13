@@ -309,10 +309,12 @@
             <div class="red"><a href="https://www.facebook.com/nova.tienda.ok" target="_blank"><img
                         onmouseover="cambiarColor('#2b2a978c')" class="face" src="./assets/ico/facebook_109862.svg"
                         alt="Conectar con Facebook"></a></div>
-            <div class="red"><a href="https://instagram.com" target="_blank"><img onmouseover="cambiarColor('#a52d7b8c')"
-                        class="ig" src="./assets/ico/instagam_109863.svg" alt="Conectar con Instagram"></a></div>
-            <div class="red"><a href="https://google.com.ar" target="_blank"><img onmouseover="cambiarColor('#d341418c')"
-                        class="g" src="./assets/ico/g_109859.svg" alt="Conectar con Google"></a></div>
+            <div class="red"><a href="https://instagram.com" target="_blank"><img
+                        onmouseover="cambiarColor('#a52d7b8c')" class="ig" src="./assets/ico/instagam_109863.svg"
+                        alt="Conectar con Instagram"></a></div>
+            <div class="red"><a href="https://google.com.ar" target="_blank"><img
+                        onmouseover="cambiarColor('#d341418c')" class="g" src="./assets/ico/g_109859.svg"
+                        alt="Conectar con Google"></a></div>
             <script>
                 let fondo = document.getElementById('redes-lateral');
 
@@ -393,9 +395,19 @@
     </main>
 
     <div class="contacto" id="contacto">
-        <h3>Contacto</h3>
         <div class="contenedor-contacto">
-            <form action="" class="form-contacto"></form>
+            <h3>Contacto</h3>
+            <div class="cont-form">
+                <form action="" class="form-contacto">
+                    <label for="nombre">Nombre</label><input type="text" name="" id="nombre" placeholder="Nombre de contacto">
+                    <label for="mail">Email</label><input type="email" name="" id="mail" placeholder="Email">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="" cols="30" rows="5" draggable="false"></textarea>
+                    
+                    <!-- <input type="text" name="" id="mensaje" placeholder="Escribi tu mensaje aca..."> -->
+                    <input class="form-btn" type="submit" value="Enviar">
+                </form>
+            </div>
         </div>
     </div>
 
@@ -633,13 +645,14 @@
                 </div>
             </a>
             <ul class="nav-ul" id="nav-ul">
-                <li class="nav-item"><a id="item1" href="#">Inicio</a></li>
+                <li class="nav-item"><a href="#">Inicio</a></li>
                 <li class="nav-item"><a href="#productos">Productos</a></li>
                 <li class="nav-item right"><a href="#about">Sobre nosotros</a></li>
                 <li class="nav-item right"><a href="#contacto">Contacto</a></li>
             </ul>
+            <p class="p-final">Diseñado por a <a href="https://github.com/gongh95" target="_BLANK">@gongh95</a></p>
         </div>
-        
+
     </footer>
     <script src="./animar.js"></script>
     <script src="./logoanim.js"></script>
